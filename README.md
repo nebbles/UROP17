@@ -2,4 +2,8 @@
 UROP Project Summer 2017  
 Nvidia Jetson TX2 Developer Kit  
 
-[Set up of TX2](https://www.youtube.com/watch?v=D7lkth34rgM). In addition post-flash installs were done by manually inputting IP address assigned after connecting TX2 to WiFi.
+> Shreyus Bagga  
+> Benedict Greenberg  
+
+### Links
+ - [Week 1 Notes](/Week-1-Notes.md)
