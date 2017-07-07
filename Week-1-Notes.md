@@ -16,11 +16,13 @@ Workflow initially established included using CyberDuck for the SFTP protocol to
 
 Compilation was decidedly done for all programs thus far on the target machine due to cross-compilation errors when compiling on host due to different hardware.
 
-On-target-compilation was at first successfully executed using:
-```
-g++ test.cpp -o test `pkg-config opencv --cflags --libs
+On-target-compilation of __test.cpp__ was at first successfully executed (to __Test__) using:
+```bash
+g++ test.cpp -o Test `pkg-config opencv --cflags --libs`
+# Followed by executing the output file
+./Test
 ```  
 However this was not the recommended approach due to usage of OpenCV usually requiring `cmake` and a `CMakeList.txt`. As such with further investigation on why this approach wouldn't work using Nvidia's [official guide](https://www.youtube.com/watch?v=gvmP0WRVUxI), a fic was found to ensure the CMake would properly compile. This was with:
-```
+```bash
 cmake -D CUDA_USE_STATIC_CUDA_RUNTIME=OFF
 ```
