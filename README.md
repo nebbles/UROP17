@@ -17,6 +17,6 @@ _Exploration into Machine Learning with the Nvidia Jetson Tegra X2 Developer Kit
  
  ### Milestones
  
- `2017-Jul-07` Project defined: ML maze balancing puzzle  
- `2017-Jul-05` Nvidia Tegra X2 succussfully setup and running through SSH, including live feeds from camera and video analysis  
+ `2017-Jul-07` Project defined: ML maze balancing puzzle.  
+ `2017-Jul-05` Nvidia Tegra X2 succussfully setup and running SSH, live camera feeds, and video analysis.  
  
