@@ -1,6 +1,6 @@
 # UROP17
 Undergraduate Research Opportunity Programme Project Summer 2017  
-_Exploration into Machine Learning with the Nvidia Jetson Tegra X2 Developer Kit  _
+_Exploration into Machine Learning with the Nvidia Jetson Tegra X2 Developer Kit_  
 
 > Shreyus Bagga  
 > Benedict Greenberg  
