@@ -14,9 +14,3 @@ Initial work into image feature recognition involved using OpenCV 3 and the new 
 
 GStreamer 1.0 was configured with OpenCV 3.3-rc to allow access to the on-board camera through C++ programs making use of the OpenCV library. The following line was required to access the camera feed:  
 `nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)1920, height=(int)1080,format=(string)I420, framerate=(fraction)60/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink`  
-
-#### First Object-Tracking Program
-
-The first effective object-tracking program made use of the Tracking API in the OpenCV 3 extra modules. More precisely, through `"opencv2/tracking.hpp"`. At the start of the program, the user chooses whether to use a video or the on-board camera. The user then draws a rectangle around the object that they wish to track, on the first frame of video input. 
-
-The next task is to have a pre-determined image for the machine to recognise and detect at the start, without a user's input.
