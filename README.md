@@ -17,6 +17,7 @@ _Exploration into Machine Learning with the Nvidia Jetson Tegra X2 Developer Kit
  
  ### Milestones
  
+ `2017-Jul-19` Filtering of image through RGB thresholding to detect walls of maze.  
  `2017-Jul-17` On-board TX2 camera utlised in a simple object-tracking program (OpenCV 3.3-rc).  
  `2017-Jul-07` Project defined: ML maze balancing puzzle.  
  `2017-Jul-05` Nvidia Tegra X2 succussfully setup and running SSH, live camera feeds, and video analysis.  
