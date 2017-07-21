@@ -1,0 +1,3 @@
+/home/nvidia/UROP17/Exercises/epxthreshdetect/build/CMakeFiles/edit_cache.dir
+/home/nvidia/UROP17/Exercises/epxthreshdetect/build/CMakeFiles/rebuild_cache.dir
+/home/nvidia/UROP17/Exercises/epxthreshdetect/build/CMakeFiles/epxthreshdetect.dir
