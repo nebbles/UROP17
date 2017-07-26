@@ -33,15 +33,12 @@ void on_trackbar( int, void* )
 }
 string intToString(int number){
 
-
     std::stringstream ss;
     ss << number;
     return ss.str();
 }
 void createTrackbars(){
     //create window for trackbars
-
-
     namedWindow(trackbarWindowName,0);
     //create memory to store trackbar name on window
     char TrackbarName[50];
@@ -161,7 +158,7 @@ int main(int argc, char* argv[])
     bool useMorphOps = true;
 
     //matrix to store image
-    Mat cameraFeed = imread("maze5.jpg");
+    Mat cameraFeed = imread("maze5-rb.png");
     GaussianBlur(cameraFeed, cameraFeed, Size(9,9), 2, 2);
     //matrix storage for HSV image
     Mat HSV;
@@ -170,12 +167,23 @@ int main(int argc, char* argv[])
     //x and y values for the location of the object
     int x=0, y=0;
     //create slider bars for HSV filtering
-    createTrackbars();
 
-    while(1){
-        cvtColor(cameraFeed,HSV,COLOR_BGR2HSV);
+
+
+
+    //createTrackbars();
+
+
+
+
+    //while(1){
+
+
+    cvtColor(cameraFeed,HSV,COLOR_BGR2HSV);
         //filter HSV image between values and store filtered image to
         //threshold matrix
+        H_MIN = 0; H_MAX = 180; S_MIN = 180;
+        S_MAX = 256; V_MIN = 62; V_MAX = 188;
         inRange(HSV,Scalar(H_MIN,S_MIN,V_MIN),Scalar(H_MAX,S_MAX,V_MAX),threshold);
         //perform morphological operations on thresholded image to eliminate noise
         //and emphasize the filtered object(s)
@@ -201,7 +209,64 @@ int main(int argc, char* argv[])
 
         //delay 30ms so that screen can refresh.
         //image will not appear without this waitKey() command
-        if(waitKey(30)==27) break;
 
-    }
+
+
+    //}
+        Mat image = threshold;
+        bitwise_not(image, image);
+        Mat Copy;
+        image.copyTo(Copy);
+
+        //cvtColor(Copy, Copy, CV_BGR2GRAY);
+        //threshold(Copy, Copy, 50, 255, CV_THRESH_BINARY_INV);
+
+        namedWindow("image", WINDOW_NORMAL);
+        imshow("image", Copy);
+        resizeWindow("image", 640, 480);
+        cout<<"Press any key to continue..."<<endl;
+        waitKey(); // wait before displaying solution
+
+        vector< vector<Point> > Contours;
+        findContours(Copy, Contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+
+        Mat draw;
+        draw = Mat::zeros(image.size(), CV_32FC1);
+        cout<<Contours.size();
+        drawContours(draw, Contours, 0, Scalar(255), -1);
+        namedWindow("image2", CV_WINDOW_FREERATIO);
+        imshow("image2", draw);
+
+        Mat dilated, eroded;
+        Mat kernel = Mat::ones(21, 21, CV_8UC1);
+
+        dilate(draw, dilated, kernel, Point(-1, -1), 2, BORDER_CONSTANT);
+        namedWindow("dilate", CV_WINDOW_FREERATIO);
+        imshow("dilate", dilated);
+
+        erode(dilated, eroded, kernel, Point(-1, -1), 1, BORDER_CONSTANT);
+        namedWindow("erode", CV_WINDOW_FREERATIO);
+        imshow("erode", eroded);
+
+        Mat diff;
+        absdiff(dilated, eroded, diff);
+        diff.convertTo(diff, CV_8UC1);
+        namedWindow("diff", CV_WINDOW_FREERATIO);
+        imshow("diff", diff);
+
+        vector< vector<Point> > PathContours;
+        findContours(diff, PathContours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+        Mat draw2;
+        draw2 = Mat::zeros(image.size(), CV_32FC1);
+        cout<<PathContours.size();
+        drawContours(image, PathContours, 0, Scalar(0,255,0), -1);
+        namedWindow("final", CV_WINDOW_FREERATIO);
+        imshow("final", image);
+
+//        for(;;){
+//            cout<<"Press ESC to exit program"<<endl;
+//            if (waitKey(100000)==27) break;
+//        }
+        waitKey()==27;
+    //}
 }

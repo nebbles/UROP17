@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/nvidia/urop/epxmaze/epxmaze.cpp
+/home/nvidia/UROP17/Exercises/epxmaze/epxmaze.cpp
 iostream
 -
 opencv/cv.hpp
-/home/nvidia/urop/epxmaze/opencv/cv.hpp
+/home/nvidia/UROP17/Exercises/epxmaze/opencv/cv.hpp
 opencv2/highgui.hpp
-/home/nvidia/urop/epxmaze/opencv2/highgui.hpp
+/home/nvidia/UROP17/Exercises/epxmaze/opencv2/highgui.hpp
 opencv2/core.hpp
-/home/nvidia/urop/epxmaze/opencv2/core.hpp
+/home/nvidia/UROP17/Exercises/epxmaze/opencv2/core.hpp
 
 /usr/local/include/opencv/cv.h
 opencv2/core/core_c.h
