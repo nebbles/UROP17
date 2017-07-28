@@ -58,6 +58,7 @@ int main( int argc, char** argv ){
 
   // perform the tracking process
   printf("Start the tracking process, press ESC to quit.\n");
+
   for ( ;; ){
     // get frame from the video
     cap >> frame;
@@ -71,7 +72,7 @@ int main( int argc, char** argv ){
     tracker->update(frame,roi);
 
     // draw the tracked object
-    rectangle( frame, roi, Scalar( 255, 0, 0 ), 1, 2 );
+    rectangle( frame, roi, Scalar( 255, 0, 0 ), 2, 1);
 
     // show image with the tracked object
     imshow("tracker",frame);

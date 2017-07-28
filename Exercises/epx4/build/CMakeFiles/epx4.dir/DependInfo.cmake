@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nvidia/urop/epx4/epx4.cpp" "/home/nvidia/urop/epx4/build/CMakeFiles/epx4.dir/epx4.cpp.o"
+  "/home/nvidia/UROP17/Exercises/epx4/epx4.cpp" "/home/nvidia/UROP17/Exercises/epx4/build/CMakeFiles/epx4.dir/epx4.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

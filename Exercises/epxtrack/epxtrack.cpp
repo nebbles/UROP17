@@ -2,6 +2,8 @@
 #include "opencv/cv.hpp"
 #include "opencv2/highgui.hpp"
 #include "opencv2/core.hpp"
+#include "opencv2/tracking.hpp"
+#include "opencv2/videoio.hpp"
 
 using namespace std;
 using namespace cv;
@@ -13,8 +15,8 @@ int S_MAX = 256;
 int V_MIN = 0;
 int V_MAX = 256;
 
-const int FRAME_WIDTH = 1920;
-const int FRAME_HEIGHT = 1080;
+const int FRAME_WIDTH = 1280;
+const int FRAME_HEIGHT = 720;
 
 //max number of objects to be detected in frame
 const int MAX_NUM_OBJECTS=50;
@@ -61,94 +63,24 @@ void createTrackbars(){
     createTrackbar( "V_MAX", trackbarWindowName, &V_MAX, V_MAX, on_trackbar );
 }
 
-void drawObject(int x, int y,Mat &frame){
-
-    //use some of the openCV drawing functions to draw crosshairs
-    //on your tracked image!
-
-    //UPDATE:JUNE 18TH, 2013
-    //added 'if' and 'else' statements to prevent
-    //memory errors from writing off the screen (ie. (-25,-25) is not within the window!)
-
-    circle(frame,Point(x,y),20,Scalar(0,255,0),2);
-    if(y-25>0)
-        line(frame,Point(x,y),Point(x,y-25),Scalar(0,255,0),2);
-    else line(frame,Point(x,y),Point(x,0),Scalar(0,255,0),2);
-    if(y+25<FRAME_HEIGHT)
-        line(frame,Point(x,y),Point(x,y+25),Scalar(0,255,0),2);
-    else line(frame,Point(x,y),Point(x,FRAME_HEIGHT),Scalar(0,255,0),2);
-    if(x-25>0)
-        line(frame,Point(x,y),Point(x-25,y),Scalar(0,255,0),2);
-    else line(frame,Point(x,y),Point(0,y),Scalar(0,255,0),2);
-    if(x+25<FRAME_WIDTH)
-        line(frame,Point(x,y),Point(x+25,y),Scalar(0,255,0),2);
-    else line(frame,Point(x,y),Point(FRAME_WIDTH,y),Scalar(0,255,0),2);
-
-    putText(frame,intToString(x)+","+intToString(y),Point(x,y+30),1,1,Scalar(0,255,0),2);
-
-}
 
 void morphOps(Mat &thresh){
 
-        //create structuring element that will be used to "dilate" and "erode" image.
-        //the element chosen here is a 3px by 3px rectangle
+    //create structuring element that will be used to "dilate" and "erode" image.
+    //the element chosen here is a 3px by 3px rectangle
 
-        Mat erodeElement = getStructuringElement( MORPH_RECT,Size(3,3));
+    Mat erodeElement = getStructuringElement( MORPH_RECT,Size(3,3));
     //dilate with larger element so make sure object is nicely visible
-        Mat dilateElement = getStructuringElement( MORPH_RECT,Size(8,8));
+    Mat dilateElement = getStructuringElement( MORPH_RECT,Size(8,8));
 
-        erode(thresh,thresh,erodeElement);
-        erode(thresh,thresh,erodeElement);
-
-
-        dilate(thresh,thresh,dilateElement);
-        dilate(thresh,thresh,dilateElement);
+    erode(thresh,thresh,erodeElement);
+    erode(thresh,thresh,erodeElement);
 
 
-
-}
-void trackFilteredObject(int &x, int &y, Mat threshold, Mat &cameraFeed){
-
-    Mat temp;
-    threshold.copyTo(temp);
-    //these two vectors needed for output of findContours
-    vector< vector<Point> > contours;
-    vector<Vec4i> hierarchy;
-    //find contours of filtered image using openCV findContours function
-    findContours(temp,contours,hierarchy,CV_RETR_CCOMP,CV_CHAIN_APPROX_SIMPLE );
-    //use moments method to find our filtered object
-    double refArea = 0;
-    bool objectFound = false;
-    if (hierarchy.size() > 0) {
-        int numObjects = hierarchy.size();
-        //if number of objects greater than MAX_NUM_OBJECTS we have a noisy filter
-        if(numObjects<MAX_NUM_OBJECTS){
-            for (int index = 0; index >= 0; index = hierarchy[index][0]) {
-
-                Moments moment = moments((cv::Mat)contours[index]);
-                double area = moment.m00;
-
-                //if the area is less than 20 px by 20px then it is probably just noise
-                //if the area is the same as the 3/2 of the image size, probably just a bad filter
-                //we only want the object with the largest area so we safe a reference area each
-                //iteration and compare it to the area in the next iteration.
-                if(area>MIN_OBJECT_AREA && area<MAX_OBJECT_AREA && area>refArea){
-                    x = moment.m10/area;
-                    y = moment.m01/area;
-                    objectFound = true;
-                    refArea = area;
-                }else objectFound = false;
+    dilate(thresh,thresh,dilateElement);
+    dilate(thresh,thresh,dilateElement);
 
 
-            }
-            //let user know you found an object
-            if(objectFound ==true){
-                putText(cameraFeed,"Tracking Object",Point(0,50),2,1,Scalar(0,255,0),2);
-                //draw object location on screen
-                drawObject(x,y,cameraFeed);}
-
-        }else putText(cameraFeed,"TOO MUCH NOISE! ADJUST FILTER",Point(0,50),1,2,Scalar(0,0,255),2);
-    }
 }
 
 int main(int argc, char* argv[])
@@ -158,7 +90,7 @@ int main(int argc, char* argv[])
     bool useMorphOps = true;
 
     //matrix to store image
-    VideoCapture input("Maze.mp4");
+    VideoCapture input("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)1280, height=(int)720,format=(string)I420, framerate=(fraction)120/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink");
     Mat cameraFeed; /* = imread("maze5-rb.png"); */
 
     //matrix storage for HSV image
@@ -167,43 +99,65 @@ int main(int argc, char* argv[])
     Mat threshold;
     //x and y values for the location of the object
     int x=0, y=0;
-    //create slider bars for HSV filtering
 
+    Rect2d roi;
 
+    // create a tracker object
 
+    Ptr<Tracker> tracker = TrackerKCF::create();
 
-    //createTrackbars();
+    input >> cameraFeed;
+    roi=selectROI("tracker",cameraFeed);
 
+    if(roi.width==0 || roi.height ==0) return 0;
 
-
+    tracker->init(cameraFeed, roi);
 
     while(1){
-        input.read(cameraFeed);
-        GaussianBlur(cameraFeed, cameraFeed, Size(9,9), 2, 2);
 
-    cvtColor(cameraFeed,HSV,COLOR_BGR2HSV);
+        input >> cameraFeed;
+
+        if(cameraFeed.rows ==0 || cameraFeed.cols==0) break;
+
+        cvtColor(cameraFeed,HSV,COLOR_BGR2HSV);
         //filter HSV image between values and store filtered image to
         //threshold matrix
-        H_MIN = 0; H_MAX = 180; S_MIN = 180;
-        S_MAX = 256; V_MIN = 62; V_MAX = 188;
+        createTrackbars();
+        //        H_MIN = 0; H_MAX = 180; S_MIN = 180;
+        //        S_MAX = 256; V_MIN = 62; V_MAX = 188;
         inRange(HSV,Scalar(H_MIN,S_MIN,V_MIN),Scalar(H_MAX,S_MAX,V_MAX),threshold);
         //perform morphological operations on thresholded image to eliminate noise
         //and emphasize the filtered object(s)
-            if(useMorphOps)
-                morphOps(threshold);
+        if(useMorphOps){
+            morphOps(threshold);
+        }
+
+        tracker->update(cameraFeed, roi);
+
+        rectangle(cameraFeed, roi, Scalar(255, 0, 0), 2, 1);
+
+        cvtColor(threshold, threshold, COLOR_GRAY2BGR);
+        rectangle(threshold, roi, Scalar(255, 0, 0), 2, 1);
+        rectangle(HSV, roi, Scalar(0, 255, 0), 2, 1);
+
         //pass in thresholded frame to our object tracking function
         //this function will return the x and y coordinates of the
         //filtered object
-        if(trackObjects)
-            trackFilteredObject(x,y,threshold,cameraFeed);
+
+
+        //        if(trackObjects)
+        //            trackFilteredObject(x,y,threshold,cameraFeed);
+
+
+
 
         //show frames
         namedWindow(windowName2, WINDOW_NORMAL);
         resizeWindow(windowName2, 640, 480);
         imshow(windowName2,threshold);
-        namedWindow(windowName, WINDOW_NORMAL);
-        resizeWindow(windowName, 640, 480);
-        imshow(windowName,cameraFeed);
+        //        namedWindow(windowName, WINDOW_NORMAL);
+        //        resizeWindow(windowName, 640, 480);
+        //        imshow(windowName,cameraFeed);
         namedWindow(windowName1, WINDOW_NORMAL);
         resizeWindow(windowName1, 640, 480);
         imshow(windowName1,HSV);
@@ -212,64 +166,8 @@ int main(int argc, char* argv[])
         //delay 30ms so that screen can refresh.
         //image will not appear without this waitKey() command
 
-        if(waitKey(60)==27) break;
+        if(waitKey(30)==27) break;
 
-    //}
-//        Mat image = threshold;
-//        bitwise_not(image, image);
-//        Mat Copy;
-//        image.copyTo(Copy);
-
-//        //cvtColor(Copy, Copy, CV_BGR2GRAY);
-//        //threshold(Copy, Copy, 50, 255, CV_THRESH_BINARY_INV);
-
-//        namedWindow("image", WINDOW_NORMAL);
-//        imshow("image", Copy);
-//        resizeWindow("image", 640, 480);
-//        //cout<<"Press any key to continue..."<<endl;
-//        //waitKey(); // wait before displaying solution
-
-//        vector< vector<Point> > Contours;
-//        findContours(Copy, Contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
-
-//        Mat draw;
-//        draw = Mat::zeros(image.size(), CV_32FC1);
-//        cout<<Contours.size();
-//        drawContours(draw, Contours, 0, Scalar(255), -1);
-//        //namedWindow("image2", CV_WINDOW_FREERATIO);
-//        //imshow("image2", draw);
-
-//        Mat dilated, eroded;
-//        Mat kernel = Mat::ones(21, 21, CV_8UC1);
-
-//        dilate(draw, dilated, kernel, Point(-1, -1), 2, BORDER_CONSTANT);
-//       namedWindow("dilate", CV_WINDOW_FREERATIO);
-//        imshow("dilate", dilated);
-
-//        erode(dilated, eroded, kernel, Point(-1, -1), 1, BORDER_CONSTANT);
-//       namedWindow("erode", CV_WINDOW_FREERATIO);
-//       imshow("erode", eroded);
-
-//        Mat diff;
-//        absdiff(dilated, eroded, diff);
-//        diff.convertTo(diff, CV_8UC1);
-//       namedWindow("diff", CV_WINDOW_FREERATIO);
-//       imshow("diff", diff);
-
-//        vector< vector<Point> > PathContours;
-//        findContours(diff, PathContours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
-//        Mat draw2;
-//        draw2 = Mat::zeros(image.size(), CV_32FC1);
-//        cout<<PathContours.size();
-//        drawContours(image, PathContours, 0, Scalar(0,255,0), -1);
-//        namedWindow("final", WINDOW_NORMAL);
-//        imshow("final", image);
-//        resizeWindow("final", 640, 480);
-
-//        for(;;){
-//            cout<<"Press ESC to exit program"<<endl;
-//            if (waitKey(100000)==27) break;
-//        }
 
     }
 }

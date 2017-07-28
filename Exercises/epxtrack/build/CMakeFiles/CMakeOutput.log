@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/nvidia/UROP17/Exercises/
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3649b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3649b.dir/build.make CMakeFiles/cmTC_3649b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e2f60/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e2f60.dir/build.make CMakeFiles/cmTC_e2f60.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3649b.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_3649b.dir/testCCompiler.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_3649b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3649b.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_3649b.dir/testCCompiler.c.o  -o cmTC_3649b -rdynamic 
+Building C object CMakeFiles/cmTC_e2f60.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_e2f60.dir/testCCompiler.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_e2f60
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2f60.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e2f60.dir/testCCompiler.c.o  -o cmTC_e2f60 -rdynamic 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_aa820/fast"
-/usr/bin/make -f CMakeFiles/cmTC_aa820.dir/build.make CMakeFiles/cmTC_aa820.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a61ea/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a61ea.dir/build.make CMakeFiles/cmTC_a61ea.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_aa820.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_aa820.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_aa820
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa820.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_aa820.dir/CMakeCCompilerABI.c.o  -o cmTC_aa820 -rdynamic  
+Building C object CMakeFiles/cmTC_a61ea.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_a61ea.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_a61ea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a61ea.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_a61ea.dir/CMakeCCompilerABI.c.o  -o cmTC_a61ea -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper
@@ -59,8 +59,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.4) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_aa820' '-rdynamic' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWYSIVb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -z relro -o cmTC_aa820 /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/aarch64-linux-gnu/5 -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/5/../../.. CMakeFiles/cmTC_aa820.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/aarch64-linux-gnu/5/crtend.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a61ea' '-rdynamic' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccinUOYy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -z relro -o cmTC_a61ea /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/aarch64-linux-gnu/5 -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/5/../../.. CMakeFiles/cmTC_a61ea.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/aarch64-linux-gnu/5/crtend.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
@@ -68,14 +68,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_aa820/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_aa820.dir/build.make CMakeFiles/cmTC_aa820.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a61ea/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a61ea.dir/build.make CMakeFiles/cmTC_a61ea.dir/build]
   ignore line: [make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_aa820.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_aa820.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_aa820]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa820.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_aa820.dir/CMakeCCompilerABI.c.o  -o cmTC_aa820 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_a61ea.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_a61ea.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_a61ea]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a61ea.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_a61ea.dir/CMakeCCompilerABI.c.o  -o cmTC_a61ea -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.4) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_aa820' '-rdynamic' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWYSIVb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -z relro -o cmTC_aa820 /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/aarch64-linux-gnu/5 -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/5/../../.. CMakeFiles/cmTC_aa820.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/aarch64-linux-gnu/5/crtend.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a61ea' '-rdynamic' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccinUOYy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -z relro -o cmTC_a61ea /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/aarch64-linux-gnu/5 -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/5/../../.. CMakeFiles/cmTC_a61ea.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/aarch64-linux-gnu/5/crtend.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccWYSIVb.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccinUOYy.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -111,7 +111,7 @@ Parsed C implicit link information from above output:
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_aa820] ==> ignore
+    arg [cmTC_a61ea] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -123,7 +123,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_aa820.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_a61ea.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -157,14 +157,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f63b8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f63b8.dir/build.make CMakeFiles/cmTC_f63b8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_710d8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_710d8.dir/build.make CMakeFiles/cmTC_710d8.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f63b8.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_f63b8.dir/feature_tests.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_f63b8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f63b8.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_f63b8.dir/feature_tests.c.o  -o cmTC_f63b8 -rdynamic 
+Building C object CMakeFiles/cmTC_710d8.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_710d8.dir/feature_tests.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_710d8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_710d8.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_710d8.dir/feature_tests.c.o  -o cmTC_710d8 -rdynamic 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
@@ -177,14 +177,14 @@ make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFi
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b46ad/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b46ad.dir/build.make CMakeFiles/cmTC_b46ad.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_dba5a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dba5a.dir/build.make CMakeFiles/cmTC_dba5a.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b46ad.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_b46ad.dir/feature_tests.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_b46ad
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b46ad.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_b46ad.dir/feature_tests.c.o  -o cmTC_b46ad -rdynamic 
+Building C object CMakeFiles/cmTC_dba5a.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_dba5a.dir/feature_tests.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_dba5a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dba5a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_dba5a.dir/feature_tests.c.o  -o cmTC_dba5a -rdynamic 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
@@ -197,14 +197,14 @@ make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFi
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7e4aa/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7e4aa.dir/build.make CMakeFiles/cmTC_7e4aa.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d0775/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d0775.dir/build.make CMakeFiles/cmTC_d0775.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7e4aa.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_7e4aa.dir/feature_tests.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_7e4aa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e4aa.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_7e4aa.dir/feature_tests.c.o  -o cmTC_7e4aa -rdynamic 
+Building C object CMakeFiles/cmTC_d0775.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_d0775.dir/feature_tests.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d0775
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0775.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_d0775.dir/feature_tests.c.o  -o cmTC_d0775 -rdynamic 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
@@ -215,28 +215,28 @@ make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFi
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2ae51/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2ae51.dir/build.make CMakeFiles/cmTC_2ae51.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_256e3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_256e3.dir/build.make CMakeFiles/cmTC_256e3.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2ae51.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_2ae51.dir/testCXXCompiler.cxx.o -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_2ae51
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ae51.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_2ae51.dir/testCXXCompiler.cxx.o  -o cmTC_2ae51 -rdynamic 
+Building CXX object CMakeFiles/cmTC_256e3.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_256e3.dir/testCXXCompiler.cxx.o -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_256e3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_256e3.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_256e3.dir/testCXXCompiler.cxx.o  -o cmTC_256e3 -rdynamic 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3eb44/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3eb44.dir/build.make CMakeFiles/cmTC_3eb44.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3d430/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3d430.dir/build.make CMakeFiles/cmTC_3d430.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3eb44.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_3eb44.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_3eb44
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3eb44.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_3eb44.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3eb44 -rdynamic  
+Building CXX object CMakeFiles/cmTC_3d430.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_3d430.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_3d430
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d430.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_3d430.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3d430 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper
@@ -246,8 +246,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.4) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3eb44' '-rdynamic' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUvmuyT.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -z relro -o cmTC_3eb44 /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/aarch64-linux-gnu/5 -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/5/../../.. CMakeFiles/cmTC_3eb44.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/5/crtend.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3d430' '-rdynamic' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cciLd48G.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -z relro -o cmTC_3d430 /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/aarch64-linux-gnu/5 -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/5/../../.. CMakeFiles/cmTC_3d430.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/5/crtend.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
@@ -255,14 +255,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_3eb44/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_3eb44.dir/build.make CMakeFiles/cmTC_3eb44.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_3d430/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_3d430.dir/build.make CMakeFiles/cmTC_3d430.dir/build]
   ignore line: [make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_3eb44.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_3eb44.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_3eb44]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3eb44.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_3eb44.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3eb44 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_3d430.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_3d430.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_3d430]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d430.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_3d430.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3d430 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper]
@@ -272,13 +272,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.4) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/5/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3eb44' '-rdynamic' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUvmuyT.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -z relro -o cmTC_3eb44 /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/aarch64-linux-gnu/5 -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/5/../../.. CMakeFiles/cmTC_3eb44.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/5/crtend.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3d430' '-rdynamic' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cciLd48G.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -z relro -o cmTC_3d430 /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/aarch64-linux-gnu/5 -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/5/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/5/../../.. CMakeFiles/cmTC_3d430.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/5/crtend.o /usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccUvmuyT.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cciLd48G.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -298,7 +298,7 @@ Parsed CXX implicit link information from above output:
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_3eb44] ==> ignore
+    arg [cmTC_3d430] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/../../../aarch64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -310,7 +310,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_3eb44.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_3d430.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,14 +342,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b18af/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b18af.dir/build.make CMakeFiles/cmTC_b18af.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_21c2f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_21c2f.dir/build.make CMakeFiles/cmTC_21c2f.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b18af.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_b18af.dir/feature_tests.cxx.o -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b18af
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b18af.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_b18af.dir/feature_tests.cxx.o  -o cmTC_b18af -rdynamic 
+Building CXX object CMakeFiles/cmTC_21c2f.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_21c2f.dir/feature_tests.cxx.o -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_21c2f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21c2f.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_21c2f.dir/feature_tests.cxx.o  -o cmTC_21c2f -rdynamic 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
@@ -415,14 +415,14 @@ make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFi
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3f67a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3f67a.dir/build.make CMakeFiles/cmTC_3f67a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e9f65/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e9f65.dir/build.make CMakeFiles/cmTC_e9f65.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3f67a.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_3f67a.dir/feature_tests.cxx.o -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_3f67a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f67a.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_3f67a.dir/feature_tests.cxx.o  -o cmTC_3f67a -rdynamic 
+Building CXX object CMakeFiles/cmTC_e9f65.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_e9f65.dir/feature_tests.cxx.o -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e9f65
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9f65.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_e9f65.dir/feature_tests.cxx.o  -o cmTC_e9f65 -rdynamic 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
@@ -488,14 +488,14 @@ make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFi
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_23196/fast"
-/usr/bin/make -f CMakeFiles/cmTC_23196.dir/build.make CMakeFiles/cmTC_23196.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d1922/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d1922.dir/build.make CMakeFiles/cmTC_d1922.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_23196.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_23196.dir/feature_tests.cxx.o -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_23196
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23196.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_23196.dir/feature_tests.cxx.o  -o cmTC_23196 -rdynamic 
+Building CXX object CMakeFiles/cmTC_d1922.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_d1922.dir/feature_tests.cxx.o -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d1922
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1922.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_d1922.dir/feature_tests.cxx.o  -o cmTC_d1922 -rdynamic 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
@@ -559,28 +559,28 @@ make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFi
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fa191/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fa191.dir/build.make CMakeFiles/cmTC_fa191.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d4e36/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d4e36.dir/build.make CMakeFiles/cmTC_d4e36.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fa191.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_fa191.dir/CheckIncludeFile.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_fa191
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa191.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC     CMakeFiles/cmTC_fa191.dir/CheckIncludeFile.c.o  -o cmTC_fa191 -rdynamic 
+Building C object CMakeFiles/cmTC_d4e36.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_d4e36.dir/CheckIncludeFile.c.o   -c /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d4e36
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4e36.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_d4e36.dir/CheckIncludeFile.c.o  -o cmTC_d4e36 -rdynamic 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_66d10/fast"
-/usr/bin/make -f CMakeFiles/cmTC_66d10.dir/build.make CMakeFiles/cmTC_66d10.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4f593/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4f593.dir/build.make CMakeFiles/cmTC_4f593.dir/build
 make[1]: Entering directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_66d10.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_66d10.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_66d10
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66d10.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_66d10.dir/CheckFunctionExists.c.o  -o cmTC_66d10 -rdynamic -lpthread 
+Building C object CMakeFiles/cmTC_4f593.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4f593.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4f593
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f593.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4f593.dir/CheckFunctionExists.c.o  -o cmTC_4f593 -rdynamic -lpthread 
 make[1]: Leaving directory '/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles/CMakeTmp'
 
 

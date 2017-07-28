@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named epxtrack
+# Target rules for targets named lsd
 
 # Build rule for target.
-epxtrack: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 epxtrack
-.PHONY : epxtrack
+lsd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lsd
+.PHONY : lsd
 
 # fast build rule for target.
-epxtrack/fast:
-	$(MAKE) -f CMakeFiles/epxtrack.dir/build.make CMakeFiles/epxtrack.dir/build
-.PHONY : epxtrack/fast
+lsd/fast:
+	$(MAKE) -f CMakeFiles/lsd.dir/build.make CMakeFiles/lsd.dir/build
+.PHONY : lsd/fast
 
 epxtrack.o: epxtrack.cpp.o
 
@@ -129,7 +129,7 @@ epxtrack.o: epxtrack.cpp.o
 
 # target to build an object file
 epxtrack.cpp.o:
-	$(MAKE) -f CMakeFiles/epxtrack.dir/build.make CMakeFiles/epxtrack.dir/epxtrack.cpp.o
+	$(MAKE) -f CMakeFiles/lsd.dir/build.make CMakeFiles/lsd.dir/epxtrack.cpp.o
 .PHONY : epxtrack.cpp.o
 
 epxtrack.i: epxtrack.cpp.i
@@ -138,7 +138,7 @@ epxtrack.i: epxtrack.cpp.i
 
 # target to preprocess a source file
 epxtrack.cpp.i:
-	$(MAKE) -f CMakeFiles/epxtrack.dir/build.make CMakeFiles/epxtrack.dir/epxtrack.cpp.i
+	$(MAKE) -f CMakeFiles/lsd.dir/build.make CMakeFiles/lsd.dir/epxtrack.cpp.i
 .PHONY : epxtrack.cpp.i
 
 epxtrack.s: epxtrack.cpp.s
@@ -147,7 +147,7 @@ epxtrack.s: epxtrack.cpp.s
 
 # target to generate assembly for a file
 epxtrack.cpp.s:
-	$(MAKE) -f CMakeFiles/epxtrack.dir/build.make CMakeFiles/epxtrack.dir/epxtrack.cpp.s
+	$(MAKE) -f CMakeFiles/lsd.dir/build.make CMakeFiles/lsd.dir/epxtrack.cpp.s
 .PHONY : epxtrack.cpp.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... epxtrack"
+	@echo "... lsd"
 	@echo "... epxtrack.o"
 	@echo "... epxtrack.i"
 	@echo "... epxtrack.s"

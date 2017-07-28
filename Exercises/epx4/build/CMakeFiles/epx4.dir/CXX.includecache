@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nvidia/urop/epx4/epx4.cpp
+/home/nvidia/UROP17/Exercises/epx4/epx4.cpp
 opencv2/core/utility.hpp
 -
 opencv2/tracking.hpp

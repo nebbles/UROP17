@@ -6,6 +6,6 @@ find_package(OpenCV REQUIRED)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(epxtrack epxtrack.cpp)
+add_executable(lsd epxtrack.cpp)
 
-target_link_libraries(epxtrack ${OpenCV_LIBS})
+target_link_libraries(lsd ${OpenCV_LIBS})
