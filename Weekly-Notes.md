@@ -2,15 +2,15 @@
 
 ## Contents
 
-1. [Week 1](#week-1)
-2. [Week 2](#week-2)
-3. [Week 3](#week-3)
-4. [Week 4 & 5](#week-4-&-5)
-5. [Week 6](#week-6)
+- [x] [Week 1](#week-1)
+- [x] [Week 2](#week-2)
+- [x] [Week 3](#week-3)
+- [x] [Week 4 & 5](#week-4--5)
+- [ ] [Week 6](#week-6)
+- [ ] [Week 7]()
+- [ ] [Week 8]()
 
 # Week ```1```
-
-## Contents
 
 1. [Set-up of Nvidia Tegra X2](#set-up-of-nvidia-tegra-x2)
 2. [Workflow](#workflow)
@@ -52,7 +52,7 @@ A number of initial ideas on the application on computer vision and machine lear
 
 Additional modifications on these concepts included a possible RC vehicle that had to navigate through unknown terrain using ML techniques to improve driving.
 
-# Week 2
+# Week ```2```
 
 ## Project Planning
 
@@ -69,7 +69,7 @@ Initial work into image feature recognition involved using OpenCV 3 and the new 
 GStreamer 1.0 was configured with OpenCV 3.3-rc to allow access to the on-board camera through C++ programs making use of the OpenCV library. The following line was required to access the camera feed:
 `nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)1920, height=(int)1080,format=(string)I420, framerate=(fraction)60/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink`
 
-# Week 3
+# Week ```3```
 
 ## First Object-Tracking Program
 
@@ -77,7 +77,7 @@ The first effective object-tracking program made use of the Tracking API in the 
 
 The next task is to have a pre-determined image for the machine to recognise and detect at the start, without a user's input.
 
-# Week 4 & 5 Notes
+# Week ```4``` & ```5```
 
 Over the two week period:
 - First iterations of the maze were produced.
@@ -90,7 +90,7 @@ Work to follow up with:
 - Assembly of maze with motors.
 - Establish Serial connection between Tegra program and Arduino (with custom written library).
 
-# Week 6
+# Week ```6```
 
 ## Maze Redesign
 
