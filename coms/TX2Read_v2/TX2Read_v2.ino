@@ -3,6 +3,7 @@ void setup()
 {
   Serial.begin(9600);
   Serial.println("TX2Read v2");
+  Serial.println(" ");
 }
 char inChar;
 String inString;
@@ -12,7 +13,6 @@ void loop()
 {
   if (Serial.available() > 0)
   {
-    Serial.println(""); // spread out Serial prints
     inChar = Serial.read();
     Serial.print("Char received: ");
     Serial.println(inChar);
@@ -20,6 +20,7 @@ void loop()
     if (inChar == ',') { // comma found to convert to int
       number = inString.toInt();
       inString = "";
+      Serial.print("The number, as Int: ");
       Serial.println(number);
 
       if (number == 1) {
@@ -28,6 +29,10 @@ void loop()
       if (number > 5) {
         Serial.println("Number is greater than 5!");
       }
+      Serial.print("The number with +1: ");
+      Serial.println(number + 1);
+      Serial.println(""); // spread out Serial prints
+
     }
     else if (inChar == '.') {
       // TODO
