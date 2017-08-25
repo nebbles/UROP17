@@ -44,6 +44,9 @@ void loop()
       inString += inChar;
       Serial.print("String updated to: ");
       Serial.println(inString);
+      if (inString == "quit") {
+        inString = ""; // set inString back to blank after hearing quit command
+      }
     }
   }
 
