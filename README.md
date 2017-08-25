@@ -9,6 +9,7 @@ _Exploration into Machine Learning with the Nvidia Jetson Tegra X2 Developer Kit
 
 ### Milestones
 
+`2017-Aug-25` Successfully communicate from TX2 to Arduino.  
 `2017-Aug-03` Successfully controlling motors with Arduino.  
 `2017-Jul-19` Filtering of image through RGB thresholding to detect walls of maze.  
 `2017-Jul-17` On-board TX2 camera utilised in a simple object-tracking program (OpenCV 3.3-rc).  
