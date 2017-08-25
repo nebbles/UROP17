@@ -97,3 +97,19 @@ Work to follow up with:
 The maze mechanism and build had to be redesigned and manufactured to implement new changes and improve on the previous two versions.
 
 Mk.III has a design which streamlines the tilting mechanism as much as possible, whilst preparing for the inevitable addition of the stepper motors and timing belts.
+
+Final addition and repairs still to be made include the upgraded ramp (v2) and fixed MAZE_BOARD. These fixes can all be found under v2 prefix of the model files.
+
+## Arduino & Motors
+
+Motor 1 using GPIO 3-6, connected to IN1-4 MOTOR A.  
+Power supply set at 4.8 V with maximum 0.5 A.  
+Motor 2 using GPIO 8-11, connected to IN1-4 MOTOR B.  
+
+Support for communicating to the Arduino from the TX2 has been implemented. In order fo the USB drivers to work properly on the Tegra, a new kernal had to be installed. This allowed for communication over port ```/dev/ttyACM1```. In additon to this, a [quick program](/coms/arduino_com_v2.cpp) has been written to send simple commands over Serial. This will be deveoped into a library that the machine learner or algorithm can do to balance and control the maze.
+
+The Arduino runs [the slave](/coms/TX2Read_v3/) to the controller program. This has integrated motor control referencing earlier work done with [**stepper_new**](/arduino/stepper_new), a custom test Arduino program. In uses a number of custom built functions such as ```getSerial()``` to understand what the controller is commanding. This as of the end of the week was working until the ```switch(command.motor)``` was implemented. As a result a number of ```// TODO``` comments have been made to improve this program.
+
+# Week ```7```
+
+_TODO: Laser cut mk3v2. Fix arduino program. Improve controller program._
