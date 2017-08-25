@@ -6,7 +6,7 @@
 - [x] [Week 2](#week-2)
 - [x] [Week 3](#week-3)
 - [x] [Week 4 & 5](#week-4--5)
-- [ ] [Week 6](#week-6)
+- [x] [Week 6](#week-6)
 - [ ] [Week 7]()
 - [ ] [Week 8]()
 
