@@ -35,6 +35,12 @@ struct command_structure { // stores two elements that make up command
 command_structure command; // construct object of struct
 int cm_idx = 0; // command number for strings of commands
 
+struct motor_states_struct { // stores the semi-permanent state of motors
+  int Aspeed = 0;
+  int Bspeed = 0;
+};
+motor_states_struct motorstate; // construct object
+
 void setup() {
   Serial.begin(9600);
   while (!Serial) {
@@ -43,18 +49,21 @@ void setup() {
   Serial.println("TX2Read v3");
   Serial.println("CHECK motors are correctly connected.");
   Serial.println(" ");
+  Serial.println("Motor A: IN1-4 connected to DIGITAL 3-6");
+  Serial.println("Motor B: IN1-4 connected to DIGITAL 8-11");
+  Serial.println(" ");
 
   // Establish initial settings for motors
   stepper1.setMaxSpeed(2000);
   stepper1.setAcceleration(2000);
   stepper1.setSpeed(2000);
-  stepper1.moveTo(20000);
+  //  stepper1.moveTo(100000);
   stepper1.run();
 
   stepper2.setMaxSpeed(2000);
   stepper2.setAcceleration(2000);
   stepper2.setSpeed(2000);
-  stepper2.moveTo(20000);
+  //  stepper2.moveTo(100000);
   stepper2.run();
 
   stepper1.stop();
@@ -66,9 +75,9 @@ void setup() {
 void loop() {
   if (Serial.available() > 0) {
     getSerial();
-    // TODO; add a getCommand which updates speeds of motors independently
+    // TODO; add a way to change motor settings
   }
-  action(); // TODO; remove dependency on the command struct, independent motor speeds
+  action();
 }
 
 

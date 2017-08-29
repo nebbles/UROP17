@@ -7,8 +7,6 @@
 void command_switch() {
   switch (cm_idx) {
     case 0:
-      //Serial.print("Can't change command.motor to: ");//DEBUG
-      //Serial.println(number);//DEBUG
       command.motor = number;
       break;
     case 1:
@@ -32,18 +30,21 @@ void getSerial() {
     inString = ""; // clear string now its converted
     command_switch(); // pass number through command switch
     cm_idx = 0; // command has ended, reset command index
-    
-    //DEBUG
-    Serial.println(" ");
-    Serial.print("  Motor: ");
-    Serial.println(command.motor);
-    Serial.print("  Speed: ");
-    Serial.println(command.mspeed);
+
+    // DEBUG
+    //    Serial.println(" ");
+    //    Serial.print("  Motor: ");
+    //    Serial.println(command.motor);
+    //    Serial.print("  Speed: ");
+    //    Serial.println(command.mspeed);
   }
   else {
     inString += inChar;
-    if (inString == "quit") {
-      inString = ""; // set inString back to blank after hearing quit command
+    if (inString == "quit" || inString == "q" || inString == "stop") {
+      inString = ""; // clear inString
+      command.motor = 0;
+      command.mspeed = 0;
+      Serial.println("quit/stop received");
     }
   }
 }
