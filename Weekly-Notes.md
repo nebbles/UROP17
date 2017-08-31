@@ -11,6 +11,7 @@
 - [ ] [Week 8](#week-8)
 
 # Week ```1```
+[_Back to top_](#contents)
 
 1. [Set-up of Nvidia Tegra X2](#set-up-of-nvidia-tegra-x2)
 2. [Workflow](#workflow)
@@ -53,6 +54,7 @@ A number of initial ideas on the application on computer vision and machine lear
 Additional modifications on these concepts included a possible RC vehicle that had to navigate through unknown terrain using ML techniques to improve driving.
 
 # Week ```2```
+[_Back to top_](#contents)
 
 ## Project Planning
 
@@ -70,6 +72,7 @@ GStreamer 1.0 was configured with OpenCV 3.3-rc to allow access to the on-board 
 `nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)1920, height=(int)1080,format=(string)I420, framerate=(fraction)60/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink`
 
 # Week ```3```
+[_Back to top_](#contents)
 
 ## First Object-Tracking Program
 
@@ -78,6 +81,7 @@ The first effective object-tracking program made use of the Tracking API in the 
 The next task is to have a pre-determined image for the machine to recognise and detect at the start, without a user's input.
 
 # Week ```4``` & ```5```
+[_Back to top_](#contents)
 
 Over the two week period:
 - First iterations of the maze were produced.
@@ -91,6 +95,7 @@ Work to follow up with:
 - Establish Serial connection between Tegra program and Arduino (with custom written library).
 
 # Week ```6```
+[_Back to top_](#contents)
 
 ## Maze Redesign
 
@@ -111,6 +116,7 @@ Support for communicating to the Arduino from the TX2 has been implemented. In o
 The Arduino runs [the slave](/coms/TX2Read_v3/) to the controller program. This has integrated motor control referencing earlier work done with [**stepper_new**](/arduino/stepper_new), a custom test Arduino program. In uses a number of custom built functions such as ```getSerial()``` to understand what the controller is commanding. This as of the end of the week was working until the ```switch(command.motor)``` was implemented. As a result a number of ```// TODO``` comments have been made to improve this program.
 
 # Week ```7```
+[_Back to top_](#contents)
 
 Week began with fixing bugs in the arduino program. These issues will be expanded on...  
 The controller program running on the Tegra was adjusted for minor fixes to work with the latest version of `TX2Read.ino`.
