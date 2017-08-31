@@ -7,8 +7,8 @@
 - [x] [Week 3](#week-3)
 - [x] [Week 4 & 5](#week-4--5)
 - [x] [Week 6](#week-6)
-- [ ] [Week 7]()
-- [ ] [Week 8]()
+- [ ] [Week 7](#week-7)
+- [ ] [Week 8](#week-8)
 
 # Week ```1```
 
@@ -113,7 +113,7 @@ The Arduino runs [the slave](/coms/TX2Read_v3/) to the controller program. This 
 # Week ```7```
 
 Week began with fixing bugs in the arduino program. These issues will be expanded on...  
-The controller program running on the Tegra was ...
+The controller program running on the Tegra was adjusted for minor fixes to work with the latest version of `TX2Read.ino`.
 
 A belt and pulley was utilised to connect the two tilting planes to connect to two 4mm aluminium rods in the lower section of the maze assembly. A gear transmission was selected for conversion from the stepper motor to the rods. As a result of neglecting the design in earlier iterations, the outer casing had to be redesigned to accomodate the stepper motors and two rods. In addition there were a number of fixes to earlier designs of the Mk.III maze design.
 
