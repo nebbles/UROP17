@@ -112,4 +112,11 @@ The Arduino runs [the slave](/coms/TX2Read_v3/) to the controller program. This 
 
 # Week ```7```
 
+Week began with fixing bugs in the arduino program. These issues will be expanded on...  
+The controller program running on the Tegra was ...
+
+A belt and pulley was utilised to connect the two tilting planes to connect to two 4mm aluminium rods in the lower section of the maze assembly. A gear transmission was selected for conversion from the stepper motor to the rods. As a result of neglecting the design in earlier iterations, the outer casing had to be redesigned to accomodate the stepper motors and two rods. In addition there were a number of fixes to earlier designs of the Mk.III maze design.
+
+Transmission was designed on [Gear Generator](http://geargenerator.com/#200,200,100,6,1,0,13521.300000005276,2,1,8,2,4,27,-90,0,0,16,4,4,27,-60,0,0,2,154) where the designs were saved as an SVG. These were converted to DXF with [CloudConvert](https://cloudconvert.com/svg-to-dxf) for the sake of CAD modelling in SolidWorks. These designs were then further modified to be compaitble with the 4mm rods and the [28BYJ-48 Stepper Motors](http://www.instructables.com/id/BYJ48-Stepper-Motor/). 
+
 _TODO: Laser cut mk3v2. Fix arduino program. Improve controller program._
