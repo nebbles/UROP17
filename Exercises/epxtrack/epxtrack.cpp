@@ -18,27 +18,26 @@ int V_MAX = 256;
 const int FRAME_WIDTH = 1280;
 const int FRAME_HEIGHT = 720;
 
-//max number of objects to be detected in frame
-const int MAX_NUM_OBJECTS=50;
-//minimum and maximum object area
-const int MIN_OBJECT_AREA = 20*20;
-const int MAX_OBJECT_AREA = FRAME_HEIGHT*FRAME_WIDTH/1.5;
+
 //names that will appear at the top of each window
 const string windowName = "Original Image";
 const string windowName1 = "HSV Image";
 const string windowName2 = "Thresholded Image";
 const string windowName3 = "After Morphological Operations";
 const string trackbarWindowName = "Trackbars";
+
 void on_trackbar( int, void* )
 {//This function gets called whenever a
     // trackbar position is changed
 }
+
 string intToString(int number){
 
     std::stringstream ss;
     ss << number;
     return ss.str();
 }
+
 void createTrackbars(){
     //create window for trackbars
     namedWindow(trackbarWindowName,0);
@@ -86,7 +85,7 @@ void morphOps(Mat &thresh){
 int main(int argc, char* argv[])
 {
     //some boolean variables for different functionality within this program
-    bool trackObjects = false;
+
     bool useMorphOps = true;
 
     //matrix to store image
@@ -106,7 +105,12 @@ int main(int argc, char* argv[])
 
     Ptr<Tracker> tracker = TrackerKCF::create();
 
+if (!cameraFeed.empty()) {
+    imshow("window", cameraFeed);
+}
+
     input >> cameraFeed;
+
     roi=selectROI("tracker",cameraFeed);
 
     if(roi.width==0 || roi.height ==0) return 0;
@@ -139,15 +143,6 @@ int main(int argc, char* argv[])
         cvtColor(threshold, threshold, COLOR_GRAY2BGR);
         rectangle(threshold, roi, Scalar(255, 0, 0), 2, 1);
         rectangle(HSV, roi, Scalar(0, 255, 0), 2, 1);
-
-        //pass in thresholded frame to our object tracking function
-        //this function will return the x and y coordinates of the
-        //filtered object
-
-
-        //        if(trackObjects)
-        //            trackFilteredObject(x,y,threshold,cameraFeed);
-
 
 
 

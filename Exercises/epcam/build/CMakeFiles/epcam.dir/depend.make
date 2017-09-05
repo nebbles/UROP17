@@ -37,16 +37,6 @@ CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/core/types.hpp
 CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/core/types_c.h
 CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/core/utility.hpp
 CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/core/version.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudaarithm.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudabgsegm.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudacodec.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudafeatures2d.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudafilters.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudaimgproc.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudaobjdetect.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudaoptflow.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudastereo.hpp
-CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/cudawarping.hpp
 CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/features2d.hpp
 CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/flann.hpp
 CMakeFiles/epcam.dir/epcam.cpp.o: /usr/local/include/opencv2/flann/all_indices.h

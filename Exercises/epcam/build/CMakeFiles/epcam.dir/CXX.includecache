@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nvidia/urop/epcam/epcam.cpp
+/home/nvidia/UROP17/Exercises/epcam/epcam.cpp
 opencv/cv.h
 -
 opencv/highgui.h
@@ -14,9 +14,9 @@ opencv/highgui.h
 iostream
 -
 opencv2/opencv.hpp
-/home/nvidia/urop/epcam/opencv2/opencv.hpp
+/home/nvidia/UROP17/Exercises/epcam/opencv2/opencv.hpp
 opencv2/core.hpp
-/home/nvidia/urop/epcam/opencv2/core.hpp
+/home/nvidia/UROP17/Exercises/epcam/opencv2/core.hpp
 
 /usr/local/include/opencv/cv.h
 opencv2/core/core_c.h
@@ -267,6 +267,8 @@ opencv2/core/traits.hpp
 /usr/local/include/opencv2/core/opencv2/core/traits.hpp
 opencv2/core/saturate.hpp
 /usr/local/include/opencv2/core/opencv2/core/saturate.hpp
+initializer_list
+-
 
 /usr/local/include/opencv2/core/neon_utils.hpp
 opencv2/core/cvdef.h
@@ -353,60 +355,6 @@ opencv2/core/core_c.h
 /usr/local/include/opencv2/core/opencv2/core/core_c.h
 
 /usr/local/include/opencv2/core/version.hpp
-
-/usr/local/include/opencv2/cudaarithm.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-
-/usr/local/include/opencv2/cudabgsegm.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-opencv2/video/background_segm.hpp
-/usr/local/include/opencv2/opencv2/video/background_segm.hpp
-
-/usr/local/include/opencv2/cudacodec.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-
-/usr/local/include/opencv2/cudafeatures2d.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-opencv2/features2d.hpp
-/usr/local/include/opencv2/opencv2/features2d.hpp
-opencv2/cudafilters.hpp
-/usr/local/include/opencv2/opencv2/cudafilters.hpp
-
-/usr/local/include/opencv2/cudafilters.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-opencv2/imgproc.hpp
-/usr/local/include/opencv2/opencv2/imgproc.hpp
-
-/usr/local/include/opencv2/cudaimgproc.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-opencv2/imgproc.hpp
-/usr/local/include/opencv2/opencv2/imgproc.hpp
-
-/usr/local/include/opencv2/cudaobjdetect.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-
-/usr/local/include/opencv2/cudaoptflow.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-
-/usr/local/include/opencv2/cudastereo.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-opencv2/calib3d.hpp
-/usr/local/include/opencv2/opencv2/calib3d.hpp
-
-/usr/local/include/opencv2/cudawarping.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/opencv2/core/cuda.hpp
-opencv2/imgproc.hpp
-/usr/local/include/opencv2/opencv2/imgproc.hpp
 
 /usr/local/include/opencv2/features2d.hpp
 opencv2/core.hpp

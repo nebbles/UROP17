@@ -90,9 +90,6 @@ lsd_EXTERNAL_OBJECTS =
 
 lsd: CMakeFiles/lsd.dir/epxtrack.cpp.o
 lsd: CMakeFiles/lsd.dir/build.make
-lsd: /usr/local/lib/libopencv_cudabgsegm.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudaobjdetect.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudastereo.so.3.3.0
 lsd: /usr/local/lib/libopencv_stitching.so.3.3.0
 lsd: /usr/local/lib/libopencv_superres.so.3.3.0
 lsd: /usr/local/lib/libopencv_videostab.so.3.3.0
@@ -118,16 +115,8 @@ lsd: /usr/local/lib/libopencv_xfeatures2d.so.3.3.0
 lsd: /usr/local/lib/libopencv_ximgproc.so.3.3.0
 lsd: /usr/local/lib/libopencv_xobjdetect.so.3.3.0
 lsd: /usr/local/lib/libopencv_xphoto.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudafeatures2d.so.3.3.0
 lsd: /usr/local/lib/libopencv_shape.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudacodec.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudaoptflow.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudalegacy.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudawarping.so.3.3.0
 lsd: /usr/local/lib/libopencv_photo.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudaimgproc.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudafilters.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudaarithm.so.3.3.0
 lsd: /usr/local/lib/libopencv_calib3d.so.3.3.0
 lsd: /usr/local/lib/libopencv_phase_unwrapping.so.3.3.0
 lsd: /usr/local/lib/libopencv_dnn.so.3.3.0
@@ -144,7 +133,6 @@ lsd: /usr/local/lib/libopencv_imgcodecs.so.3.3.0
 lsd: /usr/local/lib/libopencv_objdetect.so.3.3.0
 lsd: /usr/local/lib/libopencv_imgproc.so.3.3.0
 lsd: /usr/local/lib/libopencv_core.so.3.3.0
-lsd: /usr/local/lib/libopencv_cudev.so.3.3.0
 lsd: CMakeFiles/lsd.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nvidia/UROP17/Exercises/epxtrack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lsd"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lsd.dir/link.txt --verbose=$(VERBOSE)

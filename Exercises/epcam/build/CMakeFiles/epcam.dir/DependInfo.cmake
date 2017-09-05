@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nvidia/urop/epcam/epcam.cpp" "/home/nvidia/urop/epcam/build/CMakeFiles/epcam.dir/epcam.cpp.o"
+  "/home/nvidia/UROP17/Exercises/epcam/epcam.cpp" "/home/nvidia/UROP17/Exercises/epcam/build/CMakeFiles/epcam.dir/epcam.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
