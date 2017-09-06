@@ -14,12 +14,12 @@ using namespace std;
 using namespace cv;
 
 //We use HSV filter values to detect the maze
-int H_MIN = 48;
-int H_MAX = 190;
-int S_MIN = 182;
+int H_MIN = 66;
+int H_MAX = 155;
+int S_MIN = 180;
 int S_MAX = 256;
-int V_MIN = 53;
-int V_MAX = 146;
+int V_MIN = 101;
+int V_MAX = 199;
 //We use HSV filter values to detect the marble
 int H2_MIN = 137;
 int H2_MAX = 180;
@@ -37,7 +37,7 @@ String intToString(int number){
   return ss.str();
 }
 
-void morphOps(Mat &thresh){
+void RemoveNoise(Mat &thresh){
 
   //create structuring element that will be used to "dilate" and "erode" image.
   //the element chosen here is a 3px by 3px rectangle
@@ -49,11 +49,12 @@ void morphOps(Mat &thresh){
   erode(thresh,thresh,erodeElement);
   erode(thresh,thresh,erodeElement);
   erode(thresh, thresh, erodeElement);
+  erode(thresh, thresh, erodeElement);
 
 
   dilate(thresh,thresh,dilateElement);
   dilate(thresh,thresh,dilateElement);
-  dilate(thresh,thresh,dilateElement);
+  //dilate(thresh,thresh,dilateElement);
 
 
 
@@ -77,15 +78,14 @@ void trackFilteredObject(int &x, int &y, Mat threshold, Mat &cameraFeed){
   if (hierarchy.size() > 0) {
     int numObjects = hierarchy.size();
     //if number of objects greater than MAX_NUM_OBJECTS we have a noisy filter
-    if(numObjects<4){
+    if(numObjects<10){
       for (int index = 0; index >= 0; index = hierarchy[index][0]) {
 
 	Moments moment = moments((cv::Mat)contours[index]);
 	double area = moment.m00;
 
 	//if the area is less than 20 px by 20px then it is probably just noise
-	//if the area is the same as the 3/2 of the image size, probably just a bad filter
-	//we only want the object with the largest area so we safe a reference area each
+	//we only want the object with the largest area so we save a reference area each
 	//iteration and compare it to the area in the next iteration.
 	if(area>(20*20) && area<(300*300) && area>refArea){
 	  x = moment.m10/area;
@@ -108,7 +108,7 @@ void trackFilteredObject(int &x, int &y, Mat threshold, Mat &cameraFeed){
 
     }
     else {
-      putText(cameraFeed,"TOO MUCH NOISE! ADJUST FILTER",Point(0,50),1,2,Scalar(0,0,255),2);
+      putText(cameraFeed,"TOO MUCH NOISE: ADJUST FILTER",Point(0,50),1,2,Scalar(0,0,255),2);
     }
   }
 }
@@ -125,9 +125,11 @@ int main(){
   int x=0;
   int y=0;
 
-  VideoCapture input("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)1280, height=(int)720,format=(string)I420, framerate=(fraction)120/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink");
+  VideoCapture input("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)1280, height=(int)720,format=(string)I420, "
+		     "framerate=(fraction)120/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! "
+		     "videoconvert ! video/x-raw, format=(string)BGR ! appsink");
 
-  while(1){
+  for(;;){
 
     //Store camera input into a matrix
     input >> cameraFeed;
@@ -142,10 +144,13 @@ int main(){
     inRange(HSV,Scalar(H2_MIN,S2_MIN,V2_MIN),Scalar(H2_MAX,S2_MAX,V2_MAX),threshold_marble);
     //Eliminate some noise by eroding into binary image, then dilating to restore
     //areas that were not removed from erosion
-    morphOps(threshold_marble);
+    RemoveNoise(threshold_marble);
     //Track the object detected in the thresholded image and obtain co-ordinates
     trackFilteredObject(x, y, threshold_marble, cameraFeed);
     imshow("Window", cameraFeed);
+
+    threshold_marble += threshold;
+
     imshow("Window1", threshold_marble);
 
     if(waitKey(30)==27){
