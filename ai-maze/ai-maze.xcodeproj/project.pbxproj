@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0027D1781F71625000809B21 /* tx2write.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0027D1761F71625000809B21 /* tx2write.cpp */; };
 		007E0E021F7145C100C24D74 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007E0E011F7145C100C24D74 /* main.cpp */; };
-		007E0E0A1F7145F300C24D74 /* tx2write.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007E0E081F7145F300C24D74 /* tx2write.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,9 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0027D1761F71625000809B21 /* tx2write.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tx2write.cpp; sourceTree = "<group>"; };
+		0027D1771F71625000809B21 /* tx2write.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tx2write.hpp; sourceTree = "<group>"; };
 		007E0DFE1F7145C100C24D74 /* ai-maze */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ai-maze"; sourceTree = BUILT_PRODUCTS_DIR; };
 		007E0E011F7145C100C24D74 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		007E0E081F7145F300C24D74 /* tx2write.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tx2write.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				007E0E011F7145C100C24D74 /* main.cpp */,
-				007E0E081F7145F300C24D74 /* tx2write.cpp */,
+				0027D1761F71625000809B21 /* tx2write.cpp */,
+				0027D1771F71625000809B21 /* tx2write.hpp */,
 			);
 			path = "ai-maze";
 			sourceTree = "<group>";
@@ -122,7 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				007E0E0A1F7145F300C24D74 /* tx2write.cpp in Sources */,
+				0027D1781F71625000809B21 /* tx2write.cpp in Sources */,
 				007E0E021F7145C100C24D74 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +254,7 @@
 				007E0E071F7145C100C24D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

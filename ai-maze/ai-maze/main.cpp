@@ -18,9 +18,18 @@
 #include <stdio.h>
 #include <sstream>
 
+#include "tx2write.hpp"
+
 using namespace std;
 
 int main()
 {
     cout << "main.cpp" << endl;
+    
+    // set up x and y position variables
+    // start up threads
+    // wait for user commands
+    // close down threads correctly on close
+    test();
+    return 0;
 }
