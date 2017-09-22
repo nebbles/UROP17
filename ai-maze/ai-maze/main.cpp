@@ -30,6 +30,5 @@ int main()
     // start up threads
     // wait for user commands
     // close down threads correctly on close
-    test();
     return 0;
 }

@@ -27,10 +27,6 @@
 
 using namespace std;
 
-void test() {
-    cout << "Running test function from tx2write.cpp" << endl;
-}
-
 class PIDC {
 public:
     int Kp;
@@ -147,35 +143,66 @@ int tx2write()
     return 0;
 }
 
-int sendCommand() { // TODO
-    // TODO; take x and y position
+int sendCommand(int xmotor, int ymotor) { // TODO
+    // take x and y position
     // check validity and safety, limit if necessary
+    int Xmax = 10000;
+    int Xmin = -10000;
+    
+    int Ymax = 10000;
+    int Ymin = -10000;
+    
+    if (xmotor > Xmax) {
+        xmotor = Xmax; // correct
+    }
+    else if (xmotor < Xmin) {
+        xmotor = Xmin; // correct
+    }
+    
+    if (ymotor > Ymax) {
+        ymotor = Ymax; // correct
+    }
+    else if (ymotor < Ymin) {
+        ymotor = Ymin; // correct
+    }
+    
     // convert to corrrect format
-    // send command
+    string Xstring = to_string(xmotor);
+    string Ystring = to_string(ymotor);
+    string xcom = "1,"+Xstring+"."; // TODO check if these motor numbers are correct!
+    string ycom = "2,"+Ystring+"."; // TODO check if these motor numbers are correct!
+    
+    // send command TODO
     return 0;
 }
 
 int start() { // TODO
     
-    // set up PID controllers
+    // SET UP PID CONTROLLERS
     // arguments: P,I,D
-    PIDC PIDCx(0,0,0);
-    PIDC PIDCy(0,0,0);
+    PIDC PIDCx(0,0,0); // TODO tune these values
+    PIDC PIDCy(0,0,0); // TODO tune these values
     
-    // calibrate
+    // CALIBRATE
+    // Set a simple target.
+    // Ensure that ball is balancing stationary at target.
     
-    // run ramp procedure
+    // TEST RAMP RESET FUNCTION
+    // Drop ball through whole.
+    // Get tracker to confirm ball is not seen.
+    // Run ramp reset.
     
     
-    // loop until quit
     
-    int xpos = 0; // update x position
-    int ypos = 0; // update y position
-    
-    PIDCx.getTilt(xpos);
-    PIDCy.getTilt(ypos);
-    
-    sendCommand(); // send command to motors
+    while (true) {
+        int xpos = 0; // update x position TODO
+        int ypos = 0; // update y position TODO
+        
+        int xmove = PIDCx.getTilt(xpos);
+        int ymove = PIDCy.getTilt(ypos);
+        
+        sendCommand(xmove, ymove); // send command to motors
+    } // LOOP UNTIL QUIT
     
     return 0;
 }
