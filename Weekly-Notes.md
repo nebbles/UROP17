@@ -118,12 +118,12 @@ The Arduino runs [the slave](/coms/TX2Read_v3/) to the controller program. This 
 # Week ```7```
 [_Back to top_](#contents)
 
-Week began with fixing bugs in the arduino program. These issues will be expanded on...  
+Week began with fixing bugs in the Arduino program. These issues will be expanded on...  
 The controller program running on the Tegra was adjusted for minor fixes to work with the latest version of `TX2Read.ino`.
 
 A [belt and pulley](https://www.amazon.co.uk/MyArmor-Timing-Pulley-2GT-6mm-Opening/dp/B018DZ28V2/) was utilised to connect the two tilting planes to connect to two 4mm aluminium rods in the lower section of the maze assembly. A gear transmission was selected for conversion from the stepper motor to the rods. As a result of neglecting the design in earlier iterations, the outer casing had to be redesigned to accomodate the stepper motors and two rods. In addition there were a number of fixes to earlier designs of the Mk.III maze design.
 
-Transmission was designed on [Gear Generator](http://geargenerator.com/#200,200,100,6,1,0,13521.300000005276,2,1,8,2,4,27,-90,0,0,16,4,4,27,-60,0,0,2,154) where the designs were saved as an SVG. These were converted to DXF with [CloudConvert](https://cloudconvert.com/svg-to-dxf) for the sake of CAD modelling in SolidWorks. These designs were then further modified to be compaitble with the 4mm rods and the [28BYJ-48 Stepper Motors](http://www.instructables.com/id/BYJ48-Stepper-Motor/). 
+Transmission was designed on [Gear Generator](http://geargenerator.com/#200,200,100,6,1,0,13521.300000005276,2,1,8,2,4,27,-90,0,0,16,4,4,27,-60,0,0,2,154) where the designs were saved as an SVG. These were converted to DXF with [CloudConvert](https://cloudconvert.com/svg-to-dxf) for the sake of CAD modelling in SolidWorks. These designs were then further modified to be compaitble with the 4mm rods and the [28BYJ-48 Stepper Motors](http://www.instructables.com/id/BYJ48-Stepper-Motor/).
 
 The following files were used in the CAD modelling of the maze casing for reference:
 - [Stepper motor (GrabCAD)](https://grabcad.com/library/28byj-48-5v-stepper-motor-1)
@@ -132,4 +132,28 @@ The following files were used in the CAD modelling of the maze casing for refere
 
 Version 4 of the Mark III hardware designs were created to implement these new additions. Mostly all were further laser cut pieces to replace or add to the existing hardware, however the gears were custom modelled and 3D printed for purpose. The files for these can be found in the Mark III CAD folder.
 
-_TODO: Laser cut mk3v2. Fix arduino program. Improve controller program._
+# Week ```8``` & onwards...
+[_Back to top_](#contents)
+
+Mark III V6 marked the final version of the iterative design. It fixed a number of issues with the hardware which prevented the the two axis tilt from working along one axis. This resulted in a redesign to ensure the pulleys were positioned centrally in line with the pivots on each of the maze supporting sections.
+
+A brief look into the interface of the built-in camera module on the TX2 revealed that they use an expensive propretory connector made by Samtec. Related searches to this camera module and I/O port include:
+- Samtec HQCD
+- Samtec Q strip
+- Samtec [interface catalogue](http://suddendocs.samtec.com/catalog_english/eqcd.pdf)
+- Samtec [EQCD](https://www.samtec.com/products/eqcd#related)
+
+Small alterations were brought to TX2Read which brought it forward to version 4. This included an updated command library so that quick control to bring both stepper motors to a halt and to deselect any active motors available. This was used, as before, in tandem with the [AccelStepper library](http://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html#a5dce13ab2a1b02b8f443318886bf6fc5) which provides enhanced stepper control over the standard stepper library.
+
+Xcode was used to begin writing the main TX2 program. `ai-maze` was created and initially included the adapted `TX2Write` program developed for testing the maze control with motors. It then was updated to include PID control within the command setting procedure so as to take the current position of the ball and move it toward a target coordinate.
+
+For the complete program, it became apparent that multiple threads (or processes) would be needed to manage the multiple resources and updating required by different components of the maze controller. The functions were split into three threads running from the main thread.
+
+- **Tracking**  
+This thread manages the rapid updating of the current position of the ball using OpenCV and its tracking features. This thread needs to manage this resource separately as it needs to be highly accurate and updated regularly.
+
+- **Navigation**  
+This thread manages the updating of the target coordinate used by the Balance thread and also uses the current ball position resource provided by the tracking thread. It uses this and its end goal to determine a route through the maze. The maze is recognised and analysed using the birds eye camera feed of the maze and then selects the next required target for the Balance thread.
+
+- **Balance (Control & Command)**  
+This consists of taking the current position of the ball and using PID to determine what the motor commands should be to get the ball to its target position. It also sends these commands over USB Serial to the Arduino which interprets and changes the motors.
