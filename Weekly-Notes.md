@@ -7,8 +7,8 @@
 - [x] [Week 3](#week-3)
 - [x] [Week 4 & 5](#week-4--5)
 - [x] [Week 6](#week-6)
-- [ ] [Week 7](#week-7)
-- [ ] [Week 8](#week-8)
+- [x] [Week 7](#week-7)
+- [x] [Week 8 & onwards...](#week-8--onwards)
 
 # Week ```1```
 [_Back to top_](#contents)
